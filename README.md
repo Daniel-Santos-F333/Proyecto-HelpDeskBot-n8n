@@ -4,7 +4,7 @@
 
 ---
 
-## 🚀 ¿Cómo lo pruebo?
+##  ¿Cómo lo pruebo?
 
 ### Requisitos previos
 
@@ -53,7 +53,7 @@ Copia la URL pública generada (ej. `https://abc123.ngrok-free.app`)
 
 ---
 
-## 📋 La problemática
+##  La problemática
 
 En muchos equipos de trabajo, las solicitudes de soporte interno se gestionan de forma desordenada: mensajes sueltos por WhatsApp, correos sin seguimiento, o simplemente conversaciones que se pierden. No existe un canal unificado, no hay registro histórico, y es difícil saber en qué estado está una solicitud una vez enviada.
 
@@ -61,7 +61,7 @@ El problema central es la falta de un sistema simple, accesible y sin fricción 
 
 ---
 
-## 🗺️ Planeación y herramientas
+##  Planeación y herramientas
 
 El objetivo fue construir un sistema de help desk conversacional completamente funcional usando herramientas accesibles, de bajo costo y desplegables en cualquier servidor. La meta: que cualquier persona pudiera abrir un ticket desde Telegram en menos de un minuto, y que el equipo de soporte tuviera un registro organizado sin depender de software costoso.
 
@@ -93,7 +93,7 @@ Se planificaron y cumplieron los siguientes flujos:
 
 ---
 
-## 🔧 ¿Qué hice?
+##  ¿Qué hice?
 
 El workflow de n8n quedó compuesto por **45 nodos** organizados en rutas bien definidas:
 
