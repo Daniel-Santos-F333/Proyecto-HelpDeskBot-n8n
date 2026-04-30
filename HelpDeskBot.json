@@ -12,7 +12,7 @@
       "typeVersion": 1.2,
       "position": [
         784,
-        736
+        632
       ],
       "id": "4c4a458b-ed71-47a4-87cc-4ecfc3a0488e",
       "name": "Telegram Trigger",
@@ -54,7 +54,7 @@
       "typeVersion": 4.7,
       "position": [
         1008,
-        736
+        632
       ],
       "id": "59366267-91e4-4dff-894c-d1824fcd91cf",
       "name": "Leer_Usuario",
@@ -105,7 +105,7 @@
       "typeVersion": 3.4,
       "position": [
         1232,
-        736
+        632
       ],
       "id": "bb16040b-91c7-4448-92ad-e9b9971095bc",
       "name": "Switch_Registro"
@@ -192,7 +192,7 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.7,
       "position": [
-        1456,
+        1680,
         560
       ],
       "id": "d8e5c490-8d1d-4f2c-b180-f31537669398",
@@ -207,13 +207,15 @@
     {
       "parameters": {
         "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
-        "text": "=Hola, {{ $('Telegram Trigger').item.json.message.from.first_name }} 👋\n\nEstoy aquí para ayudarte con solicitudes de soporte de forma rápida y ordenada.\nPor favor escribe el número de la opción que quieras usar.\n\n📄 Menú principal:\n\n0. Ayuda 🆘\n1. Crear solicitud 🗣️\n2. Consultar estado de solicitud ✔️\n3. Mis solicitudes 📝\n4. Reportes ⚠️\n5. Configuración ⚙️",
-        "additionalFields": {}
+        "text": "=Hola, {{ $('Telegram Trigger').item.json.message.from.first_name }} 👋\n\nEstoy aquí para ayudarte con solicitudes de soporte de forma rápida y ordenada.\nPor favor escribe el número de la opción que quieras usar.\n\n📄 Menú principal:\n\n0. Ayuda 🆘\n1. Crear solicitud 🗣️\n2. Consultar estado de solicitud ✔️\n3. Mis solicitudes 📝\n",
+        "additionalFields": {
+          "appendAttribution": false
+        }
       },
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        1680,
+        1904,
         560
       ],
       "id": "d09c19db-e7bb-4bb3-811e-ddfe56c6c735",
@@ -308,7 +310,7 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.7,
       "position": [
-        1904,
+        2128,
         560
       ],
       "id": "a831e54f-3dd2-4adc-8dff-e3e50c27c867",
@@ -502,7 +504,7 @@
       "typeVersion": 3.4,
       "position": [
         1456,
-        1520
+        1472
       ],
       "id": "41db0dd6-7135-408a-ad5e-c5a93ba26fb0",
       "name": "Switch_Pantallas"
@@ -617,7 +619,7 @@
       "typeVersion": 3.4,
       "position": [
         1680,
-        960
+        992
       ],
       "id": "9e622d6d-ebbe-40e4-8566-7eac313b09de",
       "name": "Switch_MenuPrincipal"
@@ -626,7 +628,9 @@
       "parameters": {
         "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
         "text": "=Vamos a crear una solicitud. Primero necesito saber el tipo.\n\nSelecciona el tipo:\n1. Soporte técnico 🖥️\n2. Solicitud administrativa 📋\n3. Consulta general ❓\n9. Cancelar ❌",
-        "additionalFields": {}
+        "additionalFields": {
+          "appendAttribution": false
+        }
       },
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
@@ -889,7 +893,7 @@
       "typeVersion": 3.4,
       "position": [
         1680,
-        2992
+        3080
       ],
       "id": "099f4907-e794-4dab-a5d3-7d44ee6739eb",
       "name": "Switch_TipoTicket"
@@ -1019,7 +1023,7 @@
       "typeVersion": 4.7,
       "position": [
         1904,
-        3184
+        3368
       ],
       "id": "7e869813-b935-48aa-ab22-f11c24d46950",
       "name": "Update_Tipo_Soporte",
@@ -1155,7 +1159,7 @@
       "typeVersion": 4.7,
       "position": [
         1904,
-        2800
+        2984
       ],
       "id": "edd316e4-e3a5-4226-8de5-09f31e2c4eb5",
       "name": "Update_Tipo_Admin",
@@ -1291,7 +1295,7 @@
       "typeVersion": 4.7,
       "position": [
         1904,
-        2992
+        3176
       ],
       "id": "72809e9e-72c4-42a3-955d-3dd1c2a29795",
       "name": "Update_Tipo_Consulta",
@@ -1306,13 +1310,15 @@
       "parameters": {
         "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
         "text": "=Selecciona la prioridad de tu solicitud:\n\n1. Alta 🔴\n2. Media 🟡\n3. Baja 🟢\n9. Cancelar ❌",
-        "additionalFields": {}
+        "additionalFields": {
+          "appendAttribution": false
+        }
       },
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
         2128,
-        3088
+        3272
       ],
       "id": "417b730c-2169-41ba-a791-efd341684969",
       "name": "Msg_PedirPrioridad",
@@ -1433,8 +1439,8 @@
       "type": "n8n-nodes-base.switch",
       "typeVersion": 3.4,
       "position": [
-        1648,
-        1904
+        1680,
+        1976
       ],
       "id": "cfc05d67-f118-4711-a616-567f2e9fa6b1",
       "name": "Switch_Prioridad"
@@ -1564,7 +1570,7 @@
       "typeVersion": 4.7,
       "position": [
         1904,
-        2032
+        2168
       ],
       "id": "bd3ef25d-bc43-42af-9b62-8658550ce65f",
       "name": "Update_Prio_Alta",
@@ -1700,7 +1706,7 @@
       "typeVersion": 4.7,
       "position": [
         1904,
-        2224
+        2360
       ],
       "id": "92badd9a-5080-4e1a-b76f-beac42baf39c",
       "name": "Update_Prio_Media",
@@ -1836,7 +1842,7 @@
       "typeVersion": 4.7,
       "position": [
         1904,
-        2416
+        2552
       ],
       "id": "5cfcd381-a773-45e2-b4bd-352c9eb58b35",
       "name": "Update_Prio_Baja",
@@ -1851,13 +1857,15 @@
       "parameters": {
         "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
         "text": "=Escribe la descripción detallada de tu solicitud 📝\n\n(Puedes escribir libremente)",
-        "additionalFields": {}
+        "additionalFields": {
+          "appendAttribution": false
+        }
       },
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
         2128,
-        2320
+        2456
       ],
       "id": "499d1026-052e-4a4f-bd3d-c587fa07f09d",
       "name": "Msg_PedirDescripcion",
@@ -1993,7 +2001,7 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.7,
       "position": [
-        1696,
+        1680,
         1712
       ],
       "id": "3b428246-d93b-428d-b04a-09b842aee23c",
@@ -2011,13 +2019,15 @@
         "text": "={{ `🎫 *RESUMEN DE TU TICKET*\n\n🔹 *Tipo:* ${$node[\"Leer_Usuario\"].json[\"temp_tipo\"]}\n🔹 *Prioridad:* ${$node[\"Leer_Usuario\"].json[\"temp_prioridad\"]}\n🔹 *Descripción:* ${$node[\"Update_Descripcion\"].json[\"temp_desc\"]}\n\n¿Confirmas el envío?\n1. Sí, crear ticket\n2. No, cancelar` }}",
         "replyMarkup": "replyKeyboardRemove",
         "replyKeyboardRemove": {},
-        "additionalFields": {}
+        "additionalFields": {
+          "appendAttribution": false
+        }
       },
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
         1904,
-        1840
+        1976
       ],
       "id": "6f30a928-5aeb-4e41-a29f-255d1bd418de",
       "name": "Msg_Confirmacion",
@@ -2091,7 +2101,7 @@
       "typeVersion": 3.4,
       "position": [
         1680,
-        3504
+        3544
       ],
       "id": "619c4cb6-fee4-44a8-9e79-f892d5a91393",
       "name": "Switch_Confirmacion"
@@ -2104,7 +2114,7 @@
       "typeVersion": 2,
       "position": [
         2352,
-        3472
+        3608
       ],
       "id": "36ef4f3b-a034-4e04-8a29-4a2e8c623e6e",
       "name": "Generar_DatosTicket"
@@ -2226,7 +2236,7 @@
       "typeVersion": 4.7,
       "position": [
         2576,
-        3472
+        3608
       ],
       "id": "8af6131d-d691-446c-839f-7f0075cd4677",
       "name": "Guardar_Ticket",
@@ -2363,8 +2373,8 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.7,
       "position": [
-        2768,
-        3472
+        2800,
+        3608
       ],
       "id": "806ca32b-9ec0-4104-bb91-6e79b36dc729",
       "name": "Update_PostTicket_Menu",
@@ -2386,8 +2396,8 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        3008,
-        3472
+        3024,
+        3608
       ],
       "id": "d292317a-8f77-4bb1-b9d2-3c03745d2341",
       "name": "Msg_ExitoTicket",
@@ -2481,8 +2491,8 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.7,
       "position": [
-        3200,
-        3472
+        3248,
+        3608
       ],
       "id": "d7a9d3a4-106b-4a8e-9397-583c5cd02284",
       "name": "Log_TicketCreado",
@@ -2617,7 +2627,7 @@
       "typeVersion": 4.7,
       "position": [
         1904,
-        2608
+        2792
       ],
       "id": "bf85a6b1-8c90-477e-a35e-ad3b59f33f7d",
       "name": "Update_Cancelar_Wizard",
@@ -2632,13 +2642,15 @@
       "parameters": {
         "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
         "text": "=Solicitud cancelada ✋\n\nEscribe el número de una opción para continuar:\n\n0. Ayuda\n1. Crear solicitud\n2. Consultar estado\n3. Mis solicitudes",
-        "additionalFields": {}
+        "additionalFields": {
+          "appendAttribution": false
+        }
       },
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
         2128,
-        2608
+        2792
       ],
       "id": "c38ada71-667d-47f5-8270-64218e5052ce",
       "name": "Msg_Cancelado",
@@ -2654,13 +2666,15 @@
       "parameters": {
         "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
         "text": "=🔍 Consulta de estado de ticket\n\nEscribe el ID del ticket que deseas consultar.\nEjemplo: TKT-0001\n\nO escribe 9 para volver al menú.",
-        "additionalFields": {}
+        "additionalFields": {
+          "appendAttribution": false
+        }
       },
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
         1904,
-        1264
+        1352
       ],
       "id": "3cd16ce5-1bbb-4e1d-a8e2-399668d0ae25",
       "name": "Msg_PedirIDTicket",
@@ -2796,7 +2810,7 @@
       "typeVersion": 4.7,
       "position": [
         2128,
-        1264
+        1352
       ],
       "id": "3c3548d4-1c55-421d-bc48-ecd11c11247d",
       "name": "Update_Pantalla_Consultando",
@@ -2837,7 +2851,7 @@
       "typeVersion": 4.7,
       "position": [
         1680,
-        3856
+        3992
       ],
       "id": "5cd35edf-294a-45d8-8313-2fc210bfb3fe",
       "name": "Buscar_Ticket",
@@ -2888,7 +2902,7 @@
       "typeVersion": 3.4,
       "position": [
         1904,
-        3856
+        3992
       ],
       "id": "e7b26a94-ea93-4718-b201-927364b197e9",
       "name": "Switch_TicketEncontrado"
@@ -2897,13 +2911,15 @@
       "parameters": {
         "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
         "text": "=❌ No se encontró ningún ticket con ese ID.\n\nVerifica que el ID sea correcto e intenta de nuevo. \n\n{{ '\\nEscribe el número de una opción para continuar:\\n\\n0. Ayuda\\n1. Crear solicitud\\n2. Consultar estado\\n3. Mis solicitudes' }}",
-        "additionalFields": {}
+        "additionalFields": {
+          "appendAttribution": false
+        }
       },
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        2336,
-        3664
+        2128,
+        3800
       ],
       "id": "af8f5b09-3283-403e-88e5-0a03b853e00a",
       "name": "Msg_NoEncontrado",
@@ -2919,13 +2935,15 @@
       "parameters": {
         "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
         "text": "={{ '📋 Información del ticket\\n\\n🎫 ID: ' + $('Buscar_Ticket').item.json.ticket_id + '\\n📌 Tipo: ' + $('Buscar_Ticket').item.json.tipo + '\\n⚡ Prioridad: '+ $('Buscar_Ticket').item.json.prioridad + '\\n📝 Descripción: ' + $('Buscar_Ticket').item.json.descripcion + '\\n🔄 Estado: ' + $('Buscar_Ticket').item.json.estado + '\\n👤 Creado por: ' + $('Buscar_Ticket').item.json.creado_por + '\\n📅 Fecha: ' + $('Buscar_Ticket').item.json.fecha_creacion + '\\n\\nEscribe el número de una opción para continuar:\\n\\n0. Ayuda\\n1. Crear solicitud\\n2. Consultar estado\\n3. Mis solicitudes' }}",
-        "additionalFields": {}
+        "additionalFields": {
+          "appendAttribution": false
+        }
       },
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
         2128,
-        3856
+        3992
       ],
       "id": "0deeee18-c9ed-4480-9d9e-17e6b8828ea5",
       "name": "Msg_InfoTicket",
@@ -3061,7 +3079,7 @@
       "typeVersion": 4.7,
       "position": [
         2352,
-        3856
+        3992
       ],
       "id": "04761e13-6600-4794-b010-15541cd67b4b",
       "name": "Update_PostConsulta_Menu",
@@ -3069,121 +3087,6 @@
         "googleSheetsOAuth2Api": {
           "id": "0wUxSJJERU3wMs6S",
           "name": "Google Sheets account"
-        }
-      }
-    },
-    {
-      "parameters": {
-        "operation": "update",
-        "documentId": {
-          "__rl": true,
-          "value": "1zKCIe3Bpx29OBgnWPn2srOL-YE1jATBSfvtVK2R4khQ",
-          "mode": "list",
-          "cachedResultName": "HelpDeskBot_DB",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1zKCIe3Bpx29OBgnWPn2srOL-YE1jATBSfvtVK2R4khQ/edit?usp=drivesdk"
-        },
-        "sheetName": {
-          "__rl": true,
-          "value": "gid=0",
-          "mode": "list",
-          "cachedResultName": "USUARIOS",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1zKCIe3Bpx29OBgnWPn2srOL-YE1jATBSfvtVK2R4khQ/edit#gid=0"
-        },
-        "columns": {
-          "mappingMode": "defineBelow",
-          "value": {
-            "telegram_user": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
-            "pantalla_actual": "MENU_PRINCIPAL"
-          },
-          "matchingColumns": [
-            "telegram_user"
-          ],
-          "schema": [
-            {
-              "id": "telegram_user",
-              "displayName": "telegram_user",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "nombre",
-              "displayName": "nombre",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "rol",
-              "displayName": "rol",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "activo",
-              "displayName": "activo",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "pantalla_actual",
-              "displayName": "pantalla_actual",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true
-            }
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
-        },
-        "options": {}
-      },
-      "type": "n8n-nodes-base.googleSheets",
-      "typeVersion": 4.7,
-      "position": [
-        784,
-        4080
-      ],
-      "id": "df398346-790c-4cdb-840a-d9d57adecaea",
-      "name": "Update_CancelarConsulta",
-      "credentials": {
-        "googleSheetsOAuth2Api": {
-          "id": "0wUxSJJERU3wMs6S",
-          "name": "Google Sheets account"
-        }
-      }
-    },
-    {
-      "parameters": {
-        "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
-        "text": "=Consulta cancelada.\n\nEscribe el número de una opción para continuar:\n\n0. Ayuda\n1. Crear solicitud\n2. Consultar estado\n3. Mis solicitudes",
-        "additionalFields": {}
-      },
-      "type": "n8n-nodes-base.telegram",
-      "typeVersion": 1.2,
-      "position": [
-        784,
-        4304
-      ],
-      "id": "28445ed4-95e1-4363-9790-d85d0fa380ee",
-      "name": "Msg_CancelarConsulta",
-      "webhookId": "a11e2a29-1496-4755-b51a-7e9ee10832e4",
-      "credentials": {
-        "telegramApi": {
-          "id": "hLrrVYvkqzAQ8MS0",
-          "name": "Telegram account"
         }
       }
     },
@@ -3217,7 +3120,7 @@
       "typeVersion": 4.7,
       "position": [
         1904,
-        1456
+        1544
       ],
       "id": "09e55069-ca37-4f78-ba4e-b7ba2130e9b9",
       "name": "Buscar_MisTickets",
@@ -3237,7 +3140,7 @@
       "typeVersion": 2,
       "position": [
         2128,
-        1456
+        1544
       ],
       "id": "872b3bc6-9c91-443e-9a81-6670baa1deb3",
       "name": "Formatear_MisTickets"
@@ -3246,13 +3149,15 @@
       "parameters": {
         "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
         "text": "={{ $json.mensaje }}",
-        "additionalFields": {}
+        "additionalFields": {
+          "appendAttribution": false
+        }
       },
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
         2352,
-        1456
+        1544
       ],
       "id": "fd9925a9-91c3-4380-b3f4-1fc52a9bf36f",
       "name": "Msg_MisSolicitudes",
@@ -3347,7 +3252,7 @@
       "typeVersion": 4.7,
       "position": [
         2576,
-        1456
+        1544
       ],
       "id": "dd9707a7-748c-450f-98ca-0ab611ba1bcd",
       "name": "Log_MisSolicitudes",
@@ -3368,7 +3273,7 @@
       "typeVersion": 1.2,
       "position": [
         1904,
-        1648
+        1736
       ],
       "id": "f9924404-7fb7-425f-a544-3f44b4a2a77f",
       "name": "Msg_Ayuda",
@@ -3384,13 +3289,15 @@
       "parameters": {
         "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
         "text": "=⚠️ Opción no reconocida.\n\nPor favor escribe el número de una de las siguientes opciones:\n\n0. Ayuda\n1. Crear solicitud\n2. Consultar estado\n3. Mis solicitudes",
-        "additionalFields": {}
+        "additionalFields": {
+          "appendAttribution": false
+        }
       },
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
         1904,
-        1072
+        1160
       ],
       "id": "b5dec789-e8d7-441f-b97a-5578f2cd6b90",
       "name": "Msg_OpcionInvalida",
@@ -3522,8 +3429,8 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.7,
       "position": [
-        1696,
-        1488
+        1680,
+        1520
       ],
       "id": "7d305b82-5bd8-4ff0-abd4-c480a6eb1d11",
       "name": "Update_Reset",
@@ -3563,8 +3470,8 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.7,
       "position": [
-        1888,
-        3472
+        1904,
+        3608
       ],
       "id": "ab366fbc-58db-456f-a5bc-e39fe9401f4f",
       "name": "Leer_Datos_Finales",
@@ -3604,8 +3511,8 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.7,
       "position": [
-        2096,
-        3472
+        2128,
+        3608
       ],
       "id": "c1e69554-88e5-4e44-aae0-a4611613d981",
       "name": "Consultar_Ultimo_Ticket",
@@ -3739,8 +3646,8 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.7,
       "position": [
-        2528,
-        3664
+        2352,
+        3800
       ],
       "id": "2243a756-e540-4ffe-b0dc-b4b9b4b682b9",
       "name": "Update_PostConsulta_Menu1",
@@ -4300,7 +4207,7 @@
     "executionOrder": "v1",
     "binaryMode": "separate"
   },
-  "versionId": "4fb31459-3ae6-4d4d-af3f-04f4c97ad718",
+  "versionId": "7e13533e-e98d-4506-b12b-16879a367765",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "9d50704354ee43afc0e8777f96c569734dc72d5b17a1754b7616188cabc779e1"
